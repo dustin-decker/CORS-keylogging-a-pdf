@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+</head>
+<body>
+<div id='keyslogged'>Keys logged: </div>
+<script type="text/javascript">
+    document.onkeypress = function (evt) {
+        evt = evt || window.event
+        key = String.fromCharCode(evt.charCode)
+        if (key) {
+            var div = document.getElementById('keyslogged');
+            div.innerHTML = div.innerHTML + key;
+        }
+    }
+</script>
+
+<br><br>
+<object data="http://foersom.com/net/HowTo/data/OoPdfFormExample.pdf" type="application/pdf" width="100%"
+        height="800px">
+    <p>It appears you don't have a PDF plugin for this browser.</p>
+</object>
+</body>
+</html>
