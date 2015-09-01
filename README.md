@@ -1,7 +1,9 @@
 #CORS-pdf - continued
 
-Based on the findings here: https://github.com/dxa4481/CORS-pdf
-the vulnerability is demonstrated by keylogging cross origin PDFs in Chromium.
+A continuation on the findings here: https://github.com/dxa4481/CORS-pdf
+the vulnerability is demonstrated by keylogging cross origin PDFs in Chromium using simple javascript keypress events.
+
+Input into PDF objects should be protected from javascript keypress events to mitigate this.
 
 
 Check out the demo:
